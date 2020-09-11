@@ -1,13 +1,15 @@
-package com.trl.controller;
+package com.trl.greeting;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/greeting")
 public class GreetingController {
 
-    @GetMapping(path = "/")
-    public String greeting3() {
+    @GetMapping
+    public String greeting() {
         return "greeting";
     }
 }

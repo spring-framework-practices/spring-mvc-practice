@@ -5,6 +5,7 @@
     <title>Hello World Process Form.</title>
 </head>
 <body>
-<h1>Hello student: ${param.studentName}</h1>
+<%--<h1>Hello student: ${param.studentName}</h1>--%>
+<h1>Hello student: ${message}</h1>
 </body>
 </html>
