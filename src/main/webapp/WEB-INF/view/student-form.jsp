@@ -10,18 +10,23 @@
 
 <form:form action="processForm" modelAttribute="student">
 
-    First name: <form:input path="firstName"/>
+    First name:
+    <form:input path="firstName"/>
 
     <br><br>
-    Last name: <form:input path="lastName"/>
+    Last name:
+    <form:input path="lastName"/>
 
     <br><br>
     <form:select path="country" items="${countries}" itemValue="shortName" itemLabel="fullName"/>
 
     <br><br>
     Favorite programming language:
-    <br>
     <form:radiobuttons path="favoriteProgrammingLanguage" items="${programmingLanguages}"/>
+
+    <br><br>
+    Operating systems:
+    <form:checkboxes path="favoriteOperatingSystem" items="${operatingSystems}"/>
 
     <br><br>
     <input type="submit" value="Submit"/>

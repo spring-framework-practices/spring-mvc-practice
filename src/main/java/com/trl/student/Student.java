@@ -1,5 +1,6 @@
 package com.trl.student;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
@@ -8,6 +9,7 @@ public class Student {
     private String lastName;
     private String country;
     private String favoriteProgrammingLanguage;
+    private String [] favoriteOperatingSystem;
 
     public Student() {
     }
@@ -44,6 +46,14 @@ public class Student {
         this.favoriteProgrammingLanguage = favoriteProgrammingLanguage;
     }
 
+    public String[] getFavoriteOperatingSystem() {
+        return favoriteOperatingSystem;
+    }
+
+    public void setFavoriteOperatingSystem(String[] favoriteOperatingSystem) {
+        this.favoriteOperatingSystem = favoriteOperatingSystem;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,12 +62,15 @@ public class Student {
         return Objects.equals(firstName, student.firstName) &&
                 Objects.equals(lastName, student.lastName) &&
                 Objects.equals(country, student.country) &&
-                Objects.equals(favoriteProgrammingLanguage, student.favoriteProgrammingLanguage);
+                Objects.equals(favoriteProgrammingLanguage, student.favoriteProgrammingLanguage) &&
+                Arrays.equals(favoriteOperatingSystem, student.favoriteOperatingSystem);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, country, favoriteProgrammingLanguage);
+        int result = Objects.hash(firstName, lastName, country, favoriteProgrammingLanguage);
+        result = 31 * result + Arrays.hashCode(favoriteOperatingSystem);
+        return result;
     }
 
     @Override
@@ -67,6 +80,7 @@ public class Student {
                 ", lastName='" + lastName + '\'' +
                 ", country='" + country + '\'' +
                 ", favoriteProgrammingLanguage='" + favoriteProgrammingLanguage + '\'' +
+                ", favoriteOperatingSystem=" + Arrays.toString(favoriteOperatingSystem) +
                 '}';
     }
 }

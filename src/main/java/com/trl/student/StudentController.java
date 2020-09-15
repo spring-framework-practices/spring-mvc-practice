@@ -17,6 +17,7 @@ public class StudentController {
         model.addAttribute("student", student);
         model.addAttribute("countries", Country.values());
         model.addAttribute("programmingLanguages", ProgrammingLanguage.values());
+        model.addAttribute("operatingSystems", OperatingSystem.values());
 
         return "student-form";
     }
