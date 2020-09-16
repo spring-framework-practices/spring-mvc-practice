@@ -19,18 +19,18 @@ public class StudentController {
         model.addAttribute("programmingLanguages", ProgrammingLanguage.values());
         model.addAttribute("operatingSystems", OperatingSystem.values());
 
-        return "student-form";
+        return "student/student-form";
     }
 
     @RequestMapping("/processForm")
     public String processForm (@ModelAttribute("student") Student student) {
 
-        return "student-confirmation";
+        return "student/student-confirmation";
     }
 
     @RequestMapping("/processFormVersionTwo")
     public String processFormVersionTwo (Model model) {
 
-        return "student-confirmation";
+        return "student/student-confirmation";
     }
 }

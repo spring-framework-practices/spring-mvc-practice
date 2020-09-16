@@ -17,7 +17,7 @@ Last Name: ${student.lastName}
 <br><br>
 Country: ${student.country}
 <br><br>
-Favorite program212ё234ming language: ${student.favoriteProgrammingLanguage}
+Favorite programming language: ${student.favoriteProgrammingLanguage}
 <br><br>
 Favorite operating system:
 <ul>

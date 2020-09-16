@@ -14,12 +14,12 @@ public class HelloWorldController {
 
     @GetMapping(path = "/showForm")
     public String showForm () {
-        return "hello-world-form";
+        return "hello-world/hello-world-form";
     }
 
     @GetMapping(path = "/processForm")
     public String processForm () {
-        return "hello-world-process-form";
+        return "hello-world/hello-world-process-form";
     }
 
     @GetMapping(path = "/processFormVersionTwo")
@@ -33,7 +33,7 @@ public class HelloWorldController {
 
         model.addAttribute("message", result);
 
-        return "hello-world-process-form";
+        return "hello-world/hello-world-process-form";
     }
 
     @GetMapping(path = "/processFormVersionThree")
@@ -45,6 +45,6 @@ public class HelloWorldController {
 
         model.addAttribute("message", result);
 
-        return "hello-world-process-form";
+        return "hello-world/hello-world-process-form";
     }
 }

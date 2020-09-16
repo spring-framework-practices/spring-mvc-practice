@@ -73,14 +73,5 @@ public class Student {
         return result;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", country='" + country + '\'' +
-                ", favoriteProgrammingLanguage='" + favoriteProgrammingLanguage + '\'' +
-                ", favoriteOperatingSystem=" + Arrays.toString(favoriteOperatingSystem) +
-                '}';
-    }
+
 }
